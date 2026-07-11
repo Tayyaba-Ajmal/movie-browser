@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand" id="logoReset">
+          <span>Movie Browser</span>
+        </div>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by title, director, or actor…"
+            autocomplete="off"
+          />
+        </div>
+        <div class="header-actions">
+          <button class="fav-toggle" id="favToggle">
+            <svg viewBox="0 0 24 24" stroke-width="2">
+              <path
+                d="M12 21s-7.5-4.6-10-9.3C.6 8 2.2 4.5 5.6 4c2-.3 3.7.7 4.9 2.4C11.7 4.7 13.4 3.7 15.4 4c3.4.5 5 4 3.6 7.7C16.5 16.4 12 21 12 21z"
+              />
+            </svg>
+            <span class="fav-label">Watchlist</span>
+            <span id="favCount">0</span>
+          </button>
+          <select class="sort-select" id="sortSelect">
+            <option value="rating-desc">Highest rated</option>
+            <option value="rating-asc">Lowest rated</option>
+            <option value="year-desc">Newest first</option>
+            <option value="year-asc">Oldest first</option>
+            <option value="title-asc">Title A–Z</option>
+          </select>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-panel" id="heroPanel"></div>
+    </section>
+    <div class="film-holes"></div>
+
+    <div class="filter-bar" id="filterBar">
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <main class="catalogue">
+      <div class="movie-grid" id="movieGrid"></div>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="modalContent"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
