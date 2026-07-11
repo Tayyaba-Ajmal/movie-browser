@@ -26,7 +26,7 @@ A premium, responsive movie browser built with **HTML5**, **CSS3**, and **Vanill
 ```text
 movie-browser/
 ├── index.html
-├── styles.css
+├── style.css
 └── script.js
 ```
 
